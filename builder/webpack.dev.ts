@@ -1,16 +1,15 @@
 import baseConfig from './webpack.base'
 import merge from 'webpack-merge'
-import webpack from 'webpack'
+import webpack, { Configuration } from 'webpack'
 import TerserPlugin from 'terser-webpack-plugin'
 
-export default merge(baseConfig, {
+export default merge(baseConfig as Configuration, {
     mode: 'production',
     devtool: false,
     optimization: {
+        minimize: true,
         minimizer:[
-            new TerserPlugin({
-                sourceMap: false,
-            }),
+            new TerserPlugin(),
         ],
     },
     plugins: [
