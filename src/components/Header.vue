@@ -4,7 +4,7 @@
     >
         <div class="container app-header">
             <el-link href="https://github.com/Indexyz/Dnsflare">
-                Dnsflare
+                Dnsflare::repo
             </el-link>
             <div class="header-right">
                 <el-link
